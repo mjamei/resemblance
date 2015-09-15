@@ -74,8 +74,11 @@ int main(int argc, char *argv[]) {
                         << shingles_array[j]->getId() << " "
                         << resemblance << endl;
             }
+            if (i % 100 == 0) {
+                printf("\r%d rows are done.", i);
+            }
         }
-
+        printf("\r%d rows are done.\n", number_lines);
         file.close();
     }
 }
